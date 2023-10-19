@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="APIUtils\" />
+    <Folder Include="CommonUtils\" />
+    <Folder Include="Config\" />
+    <Folder Include="Logger\" />
+    <Folder Include="Reporter\" />
+    <Folder Include="WebUtils\" />
+  </ItemGroup>
+
+</Project>
