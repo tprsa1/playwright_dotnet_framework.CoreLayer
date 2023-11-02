@@ -1,0 +1,162 @@
+﻿[
+  {
+    "widgetType": "overallStatistics",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "viewMode": "panel",
+        "latest": false
+      }
+    },
+    "filters": [
+      {
+        "value": "16",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "WIDGET_ONE",
+    "description": "TEST WIDGET 1",
+    "filterIds": [
+      "16"
+    ]
+  },
+  {
+    "widgetType": "overallStatistics",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "viewMode": "panel",
+        "latest": false
+      }
+    },
+    "filters": [
+      {
+        "value": "16",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "WIDGET_TWO",
+    "description": "TEST WIDGET 2",
+    "filterIds": [
+      "16"
+    ]
+  },
+  {
+    "widgetType": "overallStatistics",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "viewMode": "panel",
+        "latest": false
+      }
+    },
+    "filters": [
+      {
+        "value": "16",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "WIDGET_THREE",
+    "description": "TEST WIDGET 3",
+    "filterIds": [
+      "16"
+    ]
+  },
+  {
+    "widgetType": "overallStatistics",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "viewMode": "panel",
+        "latest": false
+      }
+    },
+    "filters": [
+      {
+        "value": "16",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "WIDGET_FOUR",
+    "description": "TEST WIDGET 4",
+    "filterIds": [
+      "16"
+    ]
+  },
+  {
+    "widgetType": "overallStatistics",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "viewMode": "panel",
+        "latest": false
+      }
+    },
+    "filters": [
+      {
+        "value": "16",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "WIDGET_FIVE",
+    "description": "TEST WIDGET 5",
+    "filterIds": [
+      "16"
+    ]
+  }
+]

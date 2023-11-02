@@ -1,4 +1,4 @@
-﻿namespace playwright_dotnet_framework.BusinessLayer
+﻿namespace playwright.dotnet.framework.BusinessLayer
 {
     public class Class1
     {
