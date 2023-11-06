@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using playwright.dotnet.framework.CoreLayer.Config;
+﻿using playwright.dotnet.framework.CoreLayer.Config;
 
 namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject
 {

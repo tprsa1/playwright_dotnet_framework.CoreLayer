@@ -1,7 +1,4 @@
 ﻿using Microsoft.Playwright;
-using Newtonsoft.Json;
-using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
-using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using System;
 using System.Text;
 
