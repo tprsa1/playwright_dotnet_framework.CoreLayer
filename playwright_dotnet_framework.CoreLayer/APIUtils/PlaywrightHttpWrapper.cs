@@ -1,5 +1,4 @@
 ﻿using Microsoft.Playwright;
-using System.ComponentModel;
 
 namespace playwright.dotnet.framework.CoreLayer.APIUtils
 {

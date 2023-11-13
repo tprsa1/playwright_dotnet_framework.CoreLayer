@@ -1,5 +1,7 @@
 ﻿using Microsoft.Playwright;
-using System;
+using Newtonsoft.Json;
+using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
+using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using System.Text;
 
 namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject

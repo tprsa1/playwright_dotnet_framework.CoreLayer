@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace playwright.dotnet.framework.CoreLayer.Config
 {
@@ -14,7 +8,7 @@ namespace playwright.dotnet.framework.CoreLayer.Config
 
         static ConfigReader()
         {
-            string jsonFilePath = "C:\\Users\\Tomislav_Prsa\\source\\repos\\playwright_dotnet_framework.CoreLayer\\playwright_dotnet_framework.CoreLayer\\appsettings.json";
+            string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json");
             string json = File.ReadAllText(jsonFilePath);
             _config = JObject.Parse(json);
         }
