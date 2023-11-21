@@ -1,423 +1,7 @@
 ﻿[
   {
-    "owner": "superadmin",
-    "id": 22,
-    "name": "LAUNCHES DURATION CHART",
-    "widgetType": "launchesDurationChart",
-    "contentParameters": {
-      "contentFields": [],
-      "itemsCount": 50,
-      "widgetOptions": {
-        "latest": false
-      }
-    },
-    "appliedFilters": [
-      {
-        "owner": "superadmin",
-        "id": 16,
-        "name": "DEMO_FILTER",
-        "conditions": [
-          {
-            "filteringField": "compositeAttribute",
-            "condition": "has",
-            "value": "demo"
-          }
-        ],
-        "orders": [
-          {
-            "sortingColumn": "startTime",
-            "isAsc": false
-          }
-        ],
-        "type": "Launch"
-      }
-    ],
-    "content": {
-      "result": [
-        {
-          "id": 25,
-          "number": 20,
-          "name": "Demo Api Tests",
-          "startTime": 1697989298311,
-          "status": "PASSED",
-          "endTime": 1697989306906,
-          "duration": 8595
-        },
-        {
-          "id": 24,
-          "number": 19,
-          "name": "Demo Api Tests",
-          "startTime": 1697989290791,
-          "status": "FAILED",
-          "endTime": 1697989297941,
-          "duration": 7150
-        },
-        {
-          "id": 23,
-          "number": 18,
-          "name": "Demo Api Tests",
-          "startTime": 1697989283145,
-          "status": "FAILED",
-          "endTime": 1697989290657,
-          "duration": 7512
-        },
-        {
-          "id": 22,
-          "number": 17,
-          "name": "Demo Api Tests",
-          "startTime": 1697989276414,
-          "status": "FAILED",
-          "endTime": 1697989282943,
-          "duration": 6528
-        },
-        {
-          "id": 21,
-          "number": 16,
-          "name": "Demo Api Tests",
-          "startTime": 1697989270468,
-          "status": "FAILED",
-          "endTime": 1697989275991,
-          "duration": 5522
-        },
-        {
-          "id": 20,
-          "number": 15,
-          "name": "Demo Api Tests",
-          "startTime": 1697660718947,
-          "status": "PASSED",
-          "endTime": 1697660727214,
-          "duration": 8266
-        },
-        {
-          "id": 19,
-          "number": 14,
-          "name": "Demo Api Tests",
-          "startTime": 1697660710670,
-          "status": "FAILED",
-          "endTime": 1697660718816,
-          "duration": 8146
-        },
-        {
-          "id": 18,
-          "number": 13,
-          "name": "Demo Api Tests",
-          "startTime": 1697660704001,
-          "status": "FAILED",
-          "endTime": 1697660710419,
-          "duration": 6418
-        },
-        {
-          "id": 17,
-          "number": 12,
-          "name": "Demo Api Tests",
-          "startTime": 1697660699031,
-          "status": "FAILED",
-          "endTime": 1697660703746,
-          "duration": 4714
-        },
-        {
-          "id": 16,
-          "number": 11,
-          "name": "Demo Api Tests",
-          "startTime": 1697660694392,
-          "status": "FAILED",
-          "endTime": 1697660699022,
-          "duration": 4629
-        },
-        {
-          "id": 15,
-          "number": 10,
-          "name": "Demo Api Tests",
-          "startTime": 1697660620711,
-          "status": "PASSED",
-          "endTime": 1697660629553,
-          "duration": 8842
-        },
-        {
-          "id": 14,
-          "number": 9,
-          "name": "Demo Api Tests",
-          "startTime": 1697660611092,
-          "status": "FAILED",
-          "endTime": 1697660620501,
-          "duration": 9409
-        },
-        {
-          "id": 13,
-          "number": 8,
-          "name": "Demo Api Tests",
-          "startTime": 1697660603642,
-          "status": "FAILED",
-          "endTime": 1697660610892,
-          "duration": 7250
-        },
-        {
-          "id": 12,
-          "number": 7,
-          "name": "Demo Api Tests",
-          "startTime": 1697660597146,
-          "status": "FAILED",
-          "endTime": 1697660603498,
-          "duration": 6352
-        },
-        {
-          "id": 11,
-          "number": 6,
-          "name": "Demo Api Tests",
-          "startTime": 1697660591190,
-          "status": "FAILED",
-          "endTime": 1697660596952,
-          "duration": 5762
-        },
-        {
-          "id": 10,
-          "number": 5,
-          "name": "Demo Api Tests",
-          "startTime": 1695915290538,
-          "status": "PASSED",
-          "endTime": 1695915299182,
-          "duration": 8644
-        },
-        {
-          "id": 9,
-          "number": 4,
-          "name": "Demo Api Tests",
-          "startTime": 1695915282591,
-          "status": "FAILED",
-          "endTime": 1695915290257,
-          "duration": 7666
-        },
-        {
-          "id": 8,
-          "number": 3,
-          "name": "Demo Api Tests",
-          "startTime": 1695915276042,
-          "status": "FAILED",
-          "endTime": 1695915282462,
-          "duration": 6419
-        },
-        {
-          "id": 7,
-          "number": 2,
-          "name": "Demo Api Tests",
-          "startTime": 1695915266672,
-          "status": "FAILED",
-          "endTime": 1695915275127,
-          "duration": 8455
-        },
-        {
-          "id": 6,
-          "number": 1,
-          "name": "Demo Api Tests",
-          "startTime": 1695915261188,
-          "status": "FAILED",
-          "endTime": 1695915266146,
-          "duration": 4958
-        }
-      ]
-    }
-  },
-  {
-    "owner": "superadmin",
-    "id": 19,
-    "name": "INVESTIGATED PERCENTAGE OF LAUNCHES",
-    "widgetType": "investigatedTrend",
-    "contentParameters": {
-      "contentFields": [],
-      "itemsCount": 50,
-      "widgetOptions": {
-        "timeline": "launch"
-      }
-    },
-    "appliedFilters": [
-      {
-        "owner": "superadmin",
-        "id": 16,
-        "name": "DEMO_FILTER",
-        "conditions": [
-          {
-            "filteringField": "compositeAttribute",
-            "condition": "has",
-            "value": "demo"
-          }
-        ],
-        "orders": [
-          {
-            "sortingColumn": "startTime",
-            "isAsc": false
-          }
-        ],
-        "type": "Launch"
-      }
-    ],
-    "content": {
-      "result": [
-        {
-          "id": 24,
-          "number": 19,
-          "name": "Demo Api Tests",
-          "startTime": 1697989290791,
-          "values": {
-            "toInvestigate": "28.57",
-            "investigated": "71.43"
-          }
-        },
-        {
-          "id": 23,
-          "number": 18,
-          "name": "Demo Api Tests",
-          "startTime": 1697989283145,
-          "values": {
-            "toInvestigate": "55.56",
-            "investigated": "44.44"
-          }
-        },
-        {
-          "id": 22,
-          "number": 17,
-          "name": "Demo Api Tests",
-          "startTime": 1697989276414,
-          "values": {
-            "toInvestigate": "44.44",
-            "investigated": "55.56"
-          }
-        },
-        {
-          "id": 21,
-          "number": 16,
-          "name": "Demo Api Tests",
-          "startTime": 1697989270468,
-          "values": {
-            "toInvestigate": "35.71",
-            "investigated": "64.28999999999999"
-          }
-        },
-        {
-          "id": 19,
-          "number": 14,
-          "name": "Demo Api Tests",
-          "startTime": 1697660710670,
-          "values": {
-            "toInvestigate": "28.57",
-            "investigated": "71.43"
-          }
-        },
-        {
-          "id": 18,
-          "number": 13,
-          "name": "Demo Api Tests",
-          "startTime": 1697660704001,
-          "values": {
-            "toInvestigate": "55.56",
-            "investigated": "44.44"
-          }
-        },
-        {
-          "id": 17,
-          "number": 12,
-          "name": "Demo Api Tests",
-          "startTime": 1697660699031,
-          "values": {
-            "toInvestigate": "44.44",
-            "investigated": "55.56"
-          }
-        },
-        {
-          "id": 16,
-          "number": 11,
-          "name": "Demo Api Tests",
-          "startTime": 1697660694392,
-          "values": {
-            "toInvestigate": "35.71",
-            "investigated": "64.28999999999999"
-          }
-        },
-        {
-          "id": 14,
-          "number": 9,
-          "name": "Demo Api Tests",
-          "startTime": 1697660611092,
-          "values": {
-            "toInvestigate": "28.57",
-            "investigated": "71.43"
-          }
-        },
-        {
-          "id": 13,
-          "number": 8,
-          "name": "Demo Api Tests",
-          "startTime": 1697660603642,
-          "values": {
-            "toInvestigate": "55.56",
-            "investigated": "44.44"
-          }
-        },
-        {
-          "id": 12,
-          "number": 7,
-          "name": "Demo Api Tests",
-          "startTime": 1697660597146,
-          "values": {
-            "toInvestigate": "44.44",
-            "investigated": "55.56"
-          }
-        },
-        {
-          "id": 11,
-          "number": 6,
-          "name": "Demo Api Tests",
-          "startTime": 1697660591190,
-          "values": {
-            "toInvestigate": "35.71",
-            "investigated": "64.28999999999999"
-          }
-        },
-        {
-          "id": 9,
-          "number": 4,
-          "name": "Demo Api Tests",
-          "startTime": 1695915282591,
-          "values": {
-            "toInvestigate": "28.57",
-            "investigated": "71.43"
-          }
-        },
-        {
-          "id": 8,
-          "number": 3,
-          "name": "Demo Api Tests",
-          "startTime": 1695915276042,
-          "values": {
-            "toInvestigate": "55.56",
-            "investigated": "44.44"
-          }
-        },
-        {
-          "id": 7,
-          "number": 2,
-          "name": "Demo Api Tests",
-          "startTime": 1695915266672,
-          "values": {
-            "toInvestigate": "44.44",
-            "investigated": "55.56"
-          }
-        },
-        {
-          "id": 6,
-          "number": 1,
-          "name": "Demo Api Tests",
-          "startTime": 1695915261188,
-          "values": {
-            "toInvestigate": "35.71",
-            "investigated": "64.28999999999999"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "owner": "superadmin",
-    "id": 17,
+    "owner": "tomislav_prsa",
+    "id": 139396,
     "name": "LAUNCH STATISTICS AREA",
     "widgetType": "statisticTrend",
     "contentParameters": {
@@ -428,6 +12,7 @@
         "statistics$executions$skipped",
         "statistics$defects$product_bug$pb001",
         "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
         "statistics$defects$to_investigate$ti001"
       ],
       "itemsCount": 50,
@@ -439,8 +24,8 @@
     },
     "appliedFilters": [
       {
-        "owner": "superadmin",
-        "id": 16,
+        "owner": "tomislav_prsa",
+        "id": 139395,
         "name": "DEMO_FILTER",
         "conditions": [
           {
@@ -461,221 +46,20 @@
     "content": {
       "result": [
         {
-          "id": 25,
-          "number": 20,
-          "name": "Demo Api Tests",
-          "startTime": 1697989298311,
-          "values": {
-            "statistics$executions$passed": "30",
-            "statistics$executions$total": "30"
-          }
-        },
-        {
-          "id": 24,
-          "number": 19,
-          "name": "Demo Api Tests",
-          "startTime": 1697989290791,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "2",
-            "statistics$executions$failed": "5",
-            "statistics$executions$passed": "20",
-            "statistics$executions$total": "25"
-          }
-        },
-        {
-          "id": 23,
-          "number": 18,
-          "name": "Demo Api Tests",
-          "startTime": 1697989283145,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "4",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "10",
-            "statistics$executions$failed": "8",
-            "statistics$executions$passed": "10",
-            "statistics$executions$skipped": "2",
-            "statistics$executions$total": "20"
-          }
-        },
-        {
-          "id": 22,
-          "number": 17,
-          "name": "Demo Api Tests",
-          "startTime": 1697989276414,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "5",
-            "statistics$defects$product_bug$pb001": "1",
-            "statistics$defects$to_investigate$ti001": "8",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "5",
-            "statistics$executions$skipped": "1",
-            "statistics$executions$total": "15"
-          }
-        },
-        {
-          "id": 21,
-          "number": 16,
-          "name": "Demo Api Tests",
-          "startTime": 1697989270468,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$to_investigate$ti001": "5",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "1",
-            "statistics$executions$total": "10"
-          }
-        },
-        {
-          "id": 20,
-          "number": 15,
-          "name": "Demo Api Tests",
-          "startTime": 1697660718947,
-          "values": {
-            "statistics$executions$passed": "30",
-            "statistics$executions$total": "30"
-          }
-        },
-        {
-          "id": 19,
-          "number": 14,
-          "name": "Demo Api Tests",
-          "startTime": 1697660710670,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "2",
-            "statistics$executions$failed": "5",
-            "statistics$executions$passed": "20",
-            "statistics$executions$total": "25"
-          }
-        },
-        {
-          "id": 18,
-          "number": 13,
-          "name": "Demo Api Tests",
-          "startTime": 1697660704001,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "4",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "10",
-            "statistics$executions$failed": "8",
-            "statistics$executions$passed": "10",
-            "statistics$executions$skipped": "2",
-            "statistics$executions$total": "20"
-          }
-        },
-        {
-          "id": 17,
-          "number": 12,
-          "name": "Demo Api Tests",
-          "startTime": 1697660699031,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "5",
-            "statistics$defects$product_bug$pb001": "1",
-            "statistics$defects$to_investigate$ti001": "8",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "5",
-            "statistics$executions$skipped": "1",
-            "statistics$executions$total": "15"
-          }
-        },
-        {
-          "id": 16,
-          "number": 11,
-          "name": "Demo Api Tests",
-          "startTime": 1697660694392,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$to_investigate$ti001": "5",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "1",
-            "statistics$executions$total": "10"
-          }
-        },
-        {
-          "id": 15,
-          "number": 10,
-          "name": "Demo Api Tests",
-          "startTime": 1697660620711,
-          "values": {
-            "statistics$executions$passed": "30",
-            "statistics$executions$total": "30"
-          }
-        },
-        {
-          "id": 14,
-          "number": 9,
-          "name": "Demo Api Tests",
-          "startTime": 1697660611092,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "2",
-            "statistics$executions$failed": "5",
-            "statistics$executions$passed": "20",
-            "statistics$executions$total": "25"
-          }
-        },
-        {
-          "id": 13,
-          "number": 8,
-          "name": "Demo Api Tests",
-          "startTime": 1697660603642,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "4",
-            "statistics$defects$product_bug$pb001": "4",
-            "statistics$defects$to_investigate$ti001": "10",
-            "statistics$executions$failed": "8",
-            "statistics$executions$passed": "10",
-            "statistics$executions$skipped": "2",
-            "statistics$executions$total": "20"
-          }
-        },
-        {
-          "id": 12,
-          "number": 7,
-          "name": "Demo Api Tests",
-          "startTime": 1697660597146,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "5",
-            "statistics$defects$product_bug$pb001": "1",
-            "statistics$defects$to_investigate$ti001": "8",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "5",
-            "statistics$executions$skipped": "1",
-            "statistics$executions$total": "15"
-          }
-        },
-        {
-          "id": 11,
-          "number": 6,
-          "name": "Demo Api Tests",
-          "startTime": 1697660591190,
-          "values": {
-            "statistics$defects$automation_bug$ab001": "1",
-            "statistics$defects$to_investigate$ti001": "5",
-            "statistics$executions$failed": "9",
-            "statistics$executions$passed": "1",
-            "statistics$executions$total": "10"
-          }
-        },
-        {
-          "id": 10,
+          "id": 6366492,
           "number": 5,
           "name": "Demo Api Tests",
-          "startTime": 1695915290538,
+          "startTime": 1699964383118,
           "values": {
             "statistics$executions$passed": "30",
             "statistics$executions$total": "30"
           }
         },
         {
-          "id": 9,
+          "id": 6366490,
           "number": 4,
           "name": "Demo Api Tests",
-          "startTime": 1695915282591,
+          "startTime": 1699964379956,
           "values": {
             "statistics$defects$automation_bug$ab001": "1",
             "statistics$defects$product_bug$pb001": "4",
@@ -686,10 +70,10 @@
           }
         },
         {
-          "id": 8,
+          "id": 6366489,
           "number": 3,
           "name": "Demo Api Tests",
-          "startTime": 1695915276042,
+          "startTime": 1699964377318,
           "values": {
             "statistics$defects$automation_bug$ab001": "4",
             "statistics$defects$product_bug$pb001": "4",
@@ -701,13 +85,14 @@
           }
         },
         {
-          "id": 7,
+          "id": 6366488,
           "number": 2,
           "name": "Demo Api Tests",
-          "startTime": 1695915266672,
+          "startTime": 1699964374696,
           "values": {
             "statistics$defects$automation_bug$ab001": "5",
             "statistics$defects$product_bug$pb001": "1",
+            "statistics$defects$system_issue$si001": "4",
             "statistics$defects$to_investigate$ti001": "8",
             "statistics$executions$failed": "9",
             "statistics$executions$passed": "5",
@@ -716,12 +101,13 @@
           }
         },
         {
-          "id": 6,
+          "id": 6366487,
           "number": 1,
           "name": "Demo Api Tests",
-          "startTime": 1695915261188,
+          "startTime": 1699964373158,
           "values": {
             "statistics$defects$automation_bug$ab001": "1",
+            "statistics$defects$system_issue$si001": "8",
             "statistics$defects$to_investigate$ti001": "5",
             "statistics$executions$failed": "9",
             "statistics$executions$passed": "1",
@@ -732,25 +118,269 @@
     }
   },
   {
-    "description": "",
-    "owner": "superadmin",
-    "id": 30,
-    "name": "Test123_046",
-    "widgetType": "flakyTestCases",
+    "owner": "tomislav_prsa",
+    "id": 139397,
+    "name": "LAUNCH STATISTICS BAR",
+    "widgetType": "statisticTrend",
     "contentParameters": {
-      "contentFields": [],
-      "itemsCount": 30,
+      "contentFields": [
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped"
+      ],
+      "itemsCount": 50,
       "widgetOptions": {
-        "includeMethods": false,
-        "launchNameFilter": "Test123"
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "bar"
       }
     },
-    "appliedFilters": [],
-    "content": {}
+    "appliedFilters": [
+      {
+        "owner": "tomislav_prsa",
+        "id": 139395,
+        "name": "DEMO_FILTER",
+        "conditions": [
+          {
+            "filteringField": "compositeAttribute",
+            "condition": "has",
+            "value": "demo"
+          }
+        ],
+        "orders": [
+          {
+            "sortingColumn": "startTime",
+            "isAsc": false
+          }
+        ],
+        "type": "Launch"
+      }
+    ],
+    "content": {
+      "result": [
+        {
+          "id": 6366492,
+          "number": 5,
+          "name": "Demo Api Tests",
+          "startTime": 1699964383118,
+          "values": {
+            "statistics$executions$passed": "30"
+          }
+        },
+        {
+          "id": 6366490,
+          "number": 4,
+          "name": "Demo Api Tests",
+          "startTime": 1699964379956,
+          "values": {
+            "statistics$executions$failed": "5",
+            "statistics$executions$passed": "20"
+          }
+        },
+        {
+          "id": 6366489,
+          "number": 3,
+          "name": "Demo Api Tests",
+          "startTime": 1699964377318,
+          "values": {
+            "statistics$executions$failed": "8",
+            "statistics$executions$passed": "10",
+            "statistics$executions$skipped": "2"
+          }
+        },
+        {
+          "id": 6366488,
+          "number": 2,
+          "name": "Demo Api Tests",
+          "startTime": 1699964374696,
+          "values": {
+            "statistics$executions$failed": "9",
+            "statistics$executions$passed": "5",
+            "statistics$executions$skipped": "1"
+          }
+        },
+        {
+          "id": 6366487,
+          "number": 1,
+          "name": "Demo Api Tests",
+          "startTime": 1699964373158,
+          "values": {
+            "statistics$executions$failed": "9",
+            "statistics$executions$passed": "1"
+          }
+        }
+      ]
+    }
   },
   {
-    "owner": "superadmin",
-    "id": 21,
+    "owner": "tomislav_prsa",
+    "id": 139399,
+    "name": "TEST CASES GROWTH TREND CHART",
+    "widgetType": "casesTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total"
+      ],
+      "itemsCount": 50,
+      "widgetOptions": {}
+    },
+    "appliedFilters": [
+      {
+        "owner": "tomislav_prsa",
+        "id": 139395,
+        "name": "DEMO_FILTER",
+        "conditions": [
+          {
+            "filteringField": "compositeAttribute",
+            "condition": "has",
+            "value": "demo"
+          }
+        ],
+        "orders": [
+          {
+            "sortingColumn": "startTime",
+            "isAsc": false
+          }
+        ],
+        "type": "Launch"
+      }
+    ],
+    "content": {
+      "result": [
+        {
+          "id": 6366487,
+          "number": 1,
+          "name": "Demo Api Tests",
+          "startTime": 1699964373158,
+          "values": {
+            "statistics$executions$total": "10",
+            "delta": "0"
+          }
+        },
+        {
+          "id": 6366488,
+          "number": 2,
+          "name": "Demo Api Tests",
+          "startTime": 1699964374696,
+          "values": {
+            "statistics$executions$total": "15",
+            "delta": "5"
+          }
+        },
+        {
+          "id": 6366489,
+          "number": 3,
+          "name": "Demo Api Tests",
+          "startTime": 1699964377318,
+          "values": {
+            "statistics$executions$total": "20",
+            "delta": "5"
+          }
+        },
+        {
+          "id": 6366490,
+          "number": 4,
+          "name": "Demo Api Tests",
+          "startTime": 1699964379956,
+          "values": {
+            "statistics$executions$total": "25",
+            "delta": "5"
+          }
+        },
+        {
+          "id": 6366492,
+          "number": 5,
+          "name": "Demo Api Tests",
+          "startTime": 1699964383118,
+          "values": {
+            "statistics$executions$total": "30",
+            "delta": "5"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "owner": "tomislav_prsa",
+    "id": 139398,
+    "name": "INVESTIGATED PERCENTAGE OF LAUNCHES",
+    "widgetType": "investigatedTrend",
+    "contentParameters": {
+      "contentFields": [],
+      "itemsCount": 50,
+      "widgetOptions": {
+        "timeline": "launch"
+      }
+    },
+    "appliedFilters": [
+      {
+        "owner": "tomislav_prsa",
+        "id": 139395,
+        "name": "DEMO_FILTER",
+        "conditions": [
+          {
+            "filteringField": "compositeAttribute",
+            "condition": "has",
+            "value": "demo"
+          }
+        ],
+        "orders": [
+          {
+            "sortingColumn": "startTime",
+            "isAsc": false
+          }
+        ],
+        "type": "Launch"
+      }
+    ],
+    "content": {
+      "result": [
+        {
+          "id": 6366490,
+          "number": 4,
+          "name": "Demo Api Tests",
+          "startTime": 1699964379956,
+          "values": {
+            "toInvestigate": "28.57",
+            "investigated": "71.43"
+          }
+        },
+        {
+          "id": 6366489,
+          "number": 3,
+          "name": "Demo Api Tests",
+          "startTime": 1699964377318,
+          "values": {
+            "toInvestigate": "55.56",
+            "investigated": "44.44"
+          }
+        },
+        {
+          "id": 6366488,
+          "number": 2,
+          "name": "Demo Api Tests",
+          "startTime": 1699964374696,
+          "values": {
+            "toInvestigate": "44.44",
+            "investigated": "55.56"
+          }
+        },
+        {
+          "id": 6366487,
+          "number": 1,
+          "name": "Demo Api Tests",
+          "startTime": 1699964373158,
+          "values": {
+            "toInvestigate": "35.71",
+            "investigated": "64.28999999999999"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "owner": "tomislav_prsa",
+    "id": 139400,
     "name": "OVERALL STATISTICS PANEL",
     "widgetType": "overallStatistics",
     "contentParameters": {
@@ -772,8 +402,8 @@
     },
     "appliedFilters": [
       {
-        "owner": "superadmin",
-        "id": 16,
+        "owner": "tomislav_prsa",
+        "id": 139395,
         "name": "DEMO_FILTER",
         "conditions": [
           {
@@ -795,14 +425,14 @@
       "result": [
         {
           "values": {
-            "statistics$defects$system_issue$si001": 48,
-            "statistics$executions$passed": 264,
-            "statistics$executions$skipped": 12,
-            "statistics$defects$to_investigate$ti001": 100,
-            "statistics$defects$automation_bug$ab001": 44,
-            "statistics$defects$product_bug$pb001": 36,
-            "statistics$executions$failed": 124,
-            "statistics$executions$total": 400
+            "statistics$defects$system_issue$si001": 12,
+            "statistics$executions$passed": 66,
+            "statistics$executions$skipped": 3,
+            "statistics$defects$to_investigate$ti001": 25,
+            "statistics$defects$automation_bug$ab001": 11,
+            "statistics$defects$product_bug$pb001": 9,
+            "statistics$executions$failed": 31,
+            "statistics$executions$total": 100
           }
         }
       ]

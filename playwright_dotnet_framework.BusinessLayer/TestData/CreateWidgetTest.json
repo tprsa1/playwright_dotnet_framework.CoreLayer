@@ -1,6 +1,6 @@
 ﻿[
   {
-    "widgetType": "overallStatistics",
+    "widgetType": "statisticTrend",
     "contentParameters": {
       "contentFields": [
         "statistics$executions$total",
@@ -15,24 +15,25 @@
       ],
       "itemsCount": "50",
       "widgetOptions": {
-        "viewMode": "panel",
-        "latest": false
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
       }
     },
     "filters": [
       {
-        "value": "16",
+        "value": "139395",
         "name": "DEMO_FILTER"
       }
     ],
-    "name": "WIDGET_ONE",
-    "description": "TEST WIDGET 1",
+    "name": "TEST WIDGET ONE",
+    "description": "",
     "filterIds": [
-      "16"
+      "139395"
     ]
   },
   {
-    "widgetType": "overallStatistics",
+    "widgetType": "statisticTrend",
     "contentParameters": {
       "contentFields": [
         "statistics$executions$total",
@@ -47,24 +48,25 @@
       ],
       "itemsCount": "50",
       "widgetOptions": {
-        "viewMode": "panel",
-        "latest": false
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
       }
     },
     "filters": [
       {
-        "value": "16",
+        "value": "139395",
         "name": "DEMO_FILTER"
       }
     ],
-    "name": "WIDGET_TWO",
-    "description": "TEST WIDGET 2",
+    "name": "TEST WIDGET TWO",
+    "description": "",
     "filterIds": [
-      "16"
+      "139395"
     ]
   },
   {
-    "widgetType": "overallStatistics",
+    "widgetType": "statisticTrend",
     "contentParameters": {
       "contentFields": [
         "statistics$executions$total",
@@ -79,24 +81,25 @@
       ],
       "itemsCount": "50",
       "widgetOptions": {
-        "viewMode": "panel",
-        "latest": false
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
       }
     },
     "filters": [
       {
-        "value": "16",
+        "value": "139395",
         "name": "DEMO_FILTER"
       }
     ],
-    "name": "WIDGET_THREE",
-    "description": "TEST WIDGET 3",
+    "name": "TEST WIDGET THREE",
+    "description": "",
     "filterIds": [
-      "16"
+      "139395"
     ]
   },
   {
-    "widgetType": "overallStatistics",
+    "widgetType": "statisticTrend",
     "contentParameters": {
       "contentFields": [
         "statistics$executions$total",
@@ -111,24 +114,25 @@
       ],
       "itemsCount": "50",
       "widgetOptions": {
-        "viewMode": "panel",
-        "latest": false
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
       }
     },
     "filters": [
       {
-        "value": "16",
+        "value": "139395",
         "name": "DEMO_FILTER"
       }
     ],
-    "name": "WIDGET_FOUR",
-    "description": "TEST WIDGET 4",
+    "name": "TEST WIDGET FOUR",
+    "description": "",
     "filterIds": [
-      "16"
+      "139395"
     ]
   },
   {
-    "widgetType": "overallStatistics",
+    "widgetType": "statisticTrend",
     "contentParameters": {
       "contentFields": [
         "statistics$executions$total",
@@ -143,20 +147,21 @@
       ],
       "itemsCount": "50",
       "widgetOptions": {
-        "viewMode": "panel",
-        "latest": false
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
       }
     },
     "filters": [
       {
-        "value": "16",
+        "value": "139395",
         "name": "DEMO_FILTER"
       }
     ],
-    "name": "WIDGET_FIVE",
-    "description": "TEST WIDGET 5",
+    "name": "TEST WIDGET FIVE",
+    "description": "",
     "filterIds": [
-      "16"
+      "139395"
     ]
   }
 ]

@@ -13,45 +13,27 @@ namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject
              _context = requestContext;
         }
 
-        public async Task<IAPIResponse> GetTokenAsync()
-        {
-            var options = new APIRequestContextOptions();
-            options.Headers = new List<KeyValuePair<string, string>>
-            {
-                new KeyValuePair<string, string>("Authorization", "Basic dWk6dWltYW4=")
-            };
-            var formData1 = _context.CreateFormData();
-            formData1.Set("grant_type", "password");
-            formData1.Set("username", "superadmin");
-            formData1.Set("password", "IloveMSTest#2");
-            // Create form data
 
-            // Set the form data
-            options.Form = formData1;
-
-            return await _context.PostAsync($"{BaseUrl}uat/sso/oauth/token", options);
-        }
-
-        public async Task<IAPIResponse> GetAllWidgetNames(String token)
+        public async Task<IAPIResponse> GetAllWidgetNames()
         {
             var getOptions = new APIRequestContextOptions();
             getOptions.Headers = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("Authorization", $"bearer {token}")
+                new KeyValuePair<string, string>("Authorization", $"bearer {apiKey}")
             };
-            return await _context.GetAsync($"{BaseUrl}api/v1/test_automation_mentoring_playwright/widget/names/all", getOptions);
+            return await _context.GetAsync($"{BaseUrl}api/v1/tomislav_prsa_personal/widget/names/all", getOptions);
         }
-        public async Task<IAPIResponse> GetWidgetById(String token, String Id)
+        public async Task<IAPIResponse> GetWidgetById(string? Id)
         {
             Console.WriteLine(Thread.CurrentThread.ManagedThreadId + "GetWidgetById" + Id);
             var getOptions = new APIRequestContextOptions();
             getOptions.Headers = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("Authorization", $"bearer {token}")
+                new KeyValuePair<string, string>("Authorization", $"bearer {apiKey}")
             };
-            return await _context.GetAsync($"{BaseUrl}api/v1/test_automation_mentoring_playwright/widget/{Id}", getOptions);
+            return await _context.GetAsync($"{BaseUrl}api/v1/tomislav_prsa_personal/widget/{Id}", getOptions);
         }
-        public async Task<IAPIResponse> UpdateWidget(String token,String Id, UpdateWidgetRequest updateWidgetRequest)
+        public async Task<IAPIResponse> UpdateWidget(string? Id, UpdateWidgetRequest updateWidgetRequest)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
@@ -63,12 +45,12 @@ namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject
             getOptions.Headers = new List<KeyValuePair<string, string>>
             {
 
-                new KeyValuePair<string, string>("Authorization", $"bearer {token}"),
+                new KeyValuePair<string, string>("Authorization", $"bearer {apiKey}"),
                 new KeyValuePair<string, string>("Content-Type", "application/json")
             };
-            return await _context.PutAsync($"{BaseUrl}api/v1/test_automation_mentoring_playwright/widget/{Id}", getOptions);
+            return await _context.PutAsync($"{BaseUrl}api/v1/tomislav_prsa_personal/widget/{Id}", getOptions);
         }
-        public async Task<IAPIResponse> CreateWidget(String token, CreateWidgetRequestBody createWidgetRequestBody)
+        public async Task<IAPIResponse> CreateWidget(CreateWidgetRequestBody createWidgetRequestBody)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
@@ -80,11 +62,11 @@ namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject
             getOptions.Headers = new List<KeyValuePair<string, string>>
             {
 
-                new KeyValuePair<string, string>("Authorization", $"bearer {token}"),
+                new KeyValuePair<string, string>("Authorization", $"bearer {apiKey}"),
                 new KeyValuePair<string, string>("Content-Type", "application/json")
             };
             var requestBody = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
-            return await _context.PostAsync($"{BaseUrl}api/v1/test_automation_mentoring_playwright/widget", getOptions);
+            return await _context.PostAsync($"{BaseUrl}api/v1/tomislav_prsa_personal/widget", getOptions);
         }
 
     }

@@ -23,15 +23,9 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
             JObject testObject = JObject.Parse(testData);
             var expectedResponse = testObject.ToObject<GetWidgetByIdContentResponse>();
             var num = expectedResponse?.Id;
-            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + "GetWidgetById" + num);
             var widgetService = new WidgetsServiceObject(Request);
-            var tokenResponse = await widgetService.GetTokenAsync();
-            tokenResponse.Status.Should().Be(200);
-            var stringResponse = await tokenResponse.TextAsync();
-            //create wrapper for null checks
-            var tokenObject = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
             // Initialize Playwright and APIRequestContextOptions
-            var getAllWidgetNamesResponse = await widgetService.GetWidgetById(tokenObject.Access_Token, num.ToString());
+            var getAllWidgetNamesResponse = await widgetService.GetWidgetById(num.ToString());
             getAllWidgetNamesResponse.Status.Should().Be(200);
             var getAllWidgetNamesString = await getAllWidgetNamesResponse.TextAsync();
             var getAllWidgetNamesActualResponse = JsonConvert.DeserializeObject<GetWidgetByIdContentResponse>(getAllWidgetNamesString);
@@ -56,13 +50,9 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
             JObject testObject = JObject.Parse(testData);
             var num = testObject["id"];
             var widgetService = new WidgetsServiceObject(Request);
-            var tokenResponse = await widgetService.GetTokenAsync();
-            tokenResponse.Status.Should().Be(200);
-            var stringResponse = await tokenResponse.TextAsync();
             //create wrapper for null checks
-            var tokenObject = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
             // Initialize Playwright and APIRequestContextOptions
-            var getAllWidgetNamesResponse = await widgetService.GetWidgetById(tokenObject.Access_Token, num.ToString());
+            var getAllWidgetNamesResponse = await widgetService.GetWidgetById(num.ToString());
             getAllWidgetNamesResponse.Status.Should().Be(200);
             var getAllWidgetNamesString = await getAllWidgetNamesResponse.TextAsync();
             var getAllWidgetNamesStringJObject = JObject.Parse(getAllWidgetNamesString);
@@ -76,7 +66,7 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
                 Value = getAllWidgetNamesStringJObject["appliedFilters"][0]["id"].ToString(),
                 Name = getAllWidgetNamesStringJObject["appliedFilters"][0]["name"].ToString()
             });
-            var getUpdateWidgetResponse = await widgetService.UpdateWidget(tokenObject.Access_Token, num.ToString(), getUpdateWidgetRequest);
+            var getUpdateWidgetResponse = await widgetService.UpdateWidget(num.ToString(), getUpdateWidgetRequest);
             getUpdateWidgetResponse.Status.Should().Be(200);
             var UpdateResponse = await getUpdateWidgetResponse.TextAsync();
             var ResponseObject = JsonObject.Parse(UpdateResponse);
@@ -103,13 +93,9 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
             var createWidgetRequest = testObject.ToObject<CreateWidgetRequestBody>();
             createWidgetRequest.Name = guuid;
             var widgetService = new WidgetsServiceObject(Request);
-            var tokenResponse = await widgetService.GetTokenAsync();
-            tokenResponse.Status.Should().Be(200);
-            var stringResponse = await tokenResponse.TextAsync();
             //create wrapper for null checks
-            var tokenObject = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
             // Initialize Playwright and APIRequestContextOptions
-            var createWidgetResponse = await widgetService.CreateWidget(tokenObject.Access_Token, createWidgetRequest);
+            var createWidgetResponse = await widgetService.CreateWidget(createWidgetRequest);
             createWidgetResponse.Status.Should().Be(201);
             var createWidgetResponseString = await createWidgetResponse.TextAsync();
             createWidgetResponseString.Should().NotBeEmpty();
