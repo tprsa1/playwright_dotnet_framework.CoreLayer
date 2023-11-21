@@ -8,6 +8,6 @@ namespace playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels
 {
     public class Content
     {
-        public List<Result> Result { get; set; }
+        public List<Result>? Result { get; set; }
     }
 }

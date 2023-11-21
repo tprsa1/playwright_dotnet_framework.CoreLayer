@@ -74,6 +74,15 @@ namespace playwright.dotnet.framework.Specflow.BDD.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 5
+#line hidden
+#line 6
+    testRunner.Given("I print \"test has started\" before test execution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Get widget by ID")]
         [NUnit.Framework.TestCaseAttribute("139396", null)]
@@ -87,7 +96,7 @@ namespace playwright.dotnet.framework.Specflow.BDD.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("id", id);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get widget by ID", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -107,13 +116,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
-    testRunner.Given(string.Format("I have widget test data for ID {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 9
-    testRunner.When("I retrieve the widget by ID", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 5
+this.FeatureBackground();
 #line hidden
 #line 10
+    testRunner.Given(string.Format("I have widget test data for ID {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 11
+    testRunner.When("I retrieve the widget by ID", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
     testRunner.Then("the widget response should match the expected result for GET Widget By Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -133,7 +145,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("widgetName", widgetName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a widget", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -153,13 +165,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
-    testRunner.Given(string.Format("I have widget creation test data for widget named {0}", widgetName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 22
-    testRunner.When("I create a new widget", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 5
+this.FeatureBackground();
 #line hidden
 #line 23
+    testRunner.Given(string.Format("I have widget creation test data for widget named {0}", widgetName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 24
+    testRunner.When("I create a new widget", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+    testRunner.But("something happens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+#line hidden
+#line 26
     testRunner.Then("the widget response should contain an Id number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

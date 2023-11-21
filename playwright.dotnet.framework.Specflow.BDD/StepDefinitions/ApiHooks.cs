@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 public class ApiHooks
 {
     private readonly IObjectContainer _container;
-    private IAPIRequestContext _requestContext;
+    private IAPIRequestContext? _requestContext;
 
     public ApiHooks(IObjectContainer container)
     {

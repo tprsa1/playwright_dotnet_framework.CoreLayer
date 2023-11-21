@@ -9,7 +9,6 @@ using System.Text.Json.Nodes;
 using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels;
-using playwright.dotnet.framework.BusinessLayer.Models.TokenModel;
 
 namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
 {
@@ -63,15 +62,15 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
             getUpdateWidgetRequest.Filters = new List<Filter>();
             getUpdateWidgetRequest.Filters.Add(new Filter
             {
-                Value = getAllWidgetNamesStringJObject["appliedFilters"][0]["id"].ToString(),
-                Name = getAllWidgetNamesStringJObject["appliedFilters"][0]["name"].ToString()
+                Value = getAllWidgetNamesStringJObject?["appliedFilters"]?[0]?["id"]?.ToString(),
+                Name = getAllWidgetNamesStringJObject?["appliedFilters"]?[0]?["name"]?.ToString()
             });
             var getUpdateWidgetResponse = await widgetService.UpdateWidget(num.ToString(), getUpdateWidgetRequest);
             getUpdateWidgetResponse.Status.Should().Be(200);
             var UpdateResponse = await getUpdateWidgetResponse.TextAsync();
             var ResponseObject = JsonObject.Parse(UpdateResponse);
-            var expectedResponseMessage = testObject["message"].ToString();
-            var actualResponseMessage = ResponseObject["message"].ToString();
+            var expectedResponseMessage = testObject?["message"]?.ToString();
+            var actualResponseMessage = ResponseObject?["message"]?.ToString();
             actualResponseMessage.Should().Be(expectedResponseMessage);
 
         }

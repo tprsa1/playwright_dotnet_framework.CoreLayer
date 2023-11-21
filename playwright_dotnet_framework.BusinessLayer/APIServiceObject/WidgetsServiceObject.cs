@@ -50,7 +50,7 @@ namespace playwright.dotnet.framework.BusinessLayer.APIServiceObject
             };
             return await _context.PutAsync($"{BaseUrl}api/v1/tomislav_prsa_personal/widget/{Id}", getOptions);
         }
-        public async Task<IAPIResponse> CreateWidget(CreateWidgetRequestBody createWidgetRequestBody)
+        public async Task<IAPIResponse> CreateWidget(CreateWidgetRequestBody? createWidgetRequestBody)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {

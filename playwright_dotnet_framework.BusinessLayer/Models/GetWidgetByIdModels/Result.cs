@@ -10,8 +10,8 @@ namespace playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels
     {
         public int Id { get; set; }
         public int Number { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public long StartTime { get; set; }
-        public Dictionary<string, string> Values { get; set; }
+        public Dictionary<string, string>? Values { get; set; }
     }
 }

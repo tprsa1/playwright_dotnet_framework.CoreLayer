@@ -2,6 +2,8 @@
     In order to ensure Widgets work correctly
     As a user
     I want to run widget tests
+Background: 
+    Given I print "test has started" before test execution
 
 Rule: All tests should pass
 Scenario Outline: Get widget by ID
@@ -20,6 +22,7 @@ Scenario Outline: Get widget by ID
 Scenario Outline: Create a widget
     Given I have widget creation test data for widget named <widgetName>
     When I create a new widget
+    But something happens
     Then the widget response should contain an Id number
 
     Examples:

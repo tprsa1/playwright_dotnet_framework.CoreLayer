@@ -6,7 +6,6 @@ using playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels;
 using playwright.dotnet.framework.CoreLayer.CommonUtils;
 using TechTalk.SpecFlow;
 using FluentAssertions;
-using playwright.dotnet.framework.BusinessLayer.Models.TokenModel;
 using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using System.Text.Json.Nodes;
@@ -15,26 +14,30 @@ using System;
 [Binding]
 public class WidgetStepDefinitions
 {
-    private readonly WidgetsServiceObject _widgetService;
-    private GetWidgetByIdContentResponse _expectedResponseGetWidgetById;
-    private CreateWidgetRequestBody _createWidgetRequestBody;
-    private CreateWidgetRequestBody _expectedResponseCreateWidget;
-    private readonly TokenResponse _tokenResponse;
-    private string _apiResponse;
-    private string _expectedUpdateMessage;
+    private readonly WidgetsServiceObject? _widgetService;
+    private GetWidgetByIdContentResponse? _expectedResponseGetWidgetById;
+    private CreateWidgetRequestBody? _createWidgetRequestBody;
+    private string? _apiResponse;
+    private string? _expectedUpdateMessage;
 
-    public WidgetStepDefinitions(IAPIRequestContext requestContext, TokenResponse tokenResponse)
+    public WidgetStepDefinitions(IAPIRequestContext requestContext)
     {
         _widgetService = new WidgetsServiceObject(requestContext);
-        _tokenResponse = tokenResponse;
     }
+
+    [Given(@"I print ""([^""]*)"" before test execution")]
+    public void GivenIPrintBeforeTestExecution(string print)
+    {
+        Console.WriteLine(print);
+    }
+
 
     [Given(@"I have widget test data for ID (.*)")]
     public void GivenIHaveWidgetTestDataFor(int id)
     {
         JArray allTestData = TestDataLoader.GetTestData("GetWidgetById");
 
-        var testObject = allTestData.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        var testObject = allTestData.FirstOrDefault(obj => obj?["id"]?.Value<int>() == id);
         if (testObject != null)
         {
             _expectedResponseGetWidgetById = testObject.ToObject<GetWidgetByIdContentResponse>();
@@ -45,7 +48,7 @@ public class WidgetStepDefinitions
     {
         JArray allTestData = TestDataLoader.GetTestData("CreateWidgetTest");
 
-        var testObject = allTestData.FirstOrDefault(obj => obj["name"].Value<string>() == widgetName);
+        var testObject = allTestData.FirstOrDefault(obj => obj?["name"]?.Value<string>() == widgetName);
         if (testObject != null)
         {
             _createWidgetRequestBody = testObject.ToObject<CreateWidgetRequestBody>();
@@ -57,29 +60,33 @@ public class WidgetStepDefinitions
     {
         JArray allTestData = TestDataLoader.GetTestData("UpdateWidgetTest");
 
-        var testObject = allTestData.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        var testObject = allTestData.FirstOrDefault(obj => obj?["id"]?.Value<int>() == id);
         if (testObject != null)
         {
             _expectedResponseGetWidgetById = new GetWidgetByIdContentResponse();
             _expectedResponseGetWidgetById.Id = testObject["id"].Value<int>();
-            _expectedUpdateMessage = testObject["message"].ToString();
+            _expectedUpdateMessage = testObject?["message"]?.ToString();
         }
     }
 
     [When(@"I retrieve the widget by ID")]
     public async Task WhenIRetrieveTheWidgetById()
     {
-        var response = await _widgetService.GetWidgetById(_expectedResponseGetWidgetById.Id.ToString());
+        var response = await _widgetService.GetWidgetById(_expectedResponseGetWidgetById?.Id.ToString());
         response.Status.Should().Be(200);
         _apiResponse = await response.TextAsync();
     }
     [When(@"I create a new widget")]
     public async Task WhenICreateANewWidget()
     {
-        var token = _tokenResponse.Access_Token;
         var response = await _widgetService.CreateWidget(_createWidgetRequestBody);
         response.Status.Should().Be(201);
         _apiResponse = await response.TextAsync();
+    }
+    [When(@"something happens")]
+    public void WhenSomethingHappens()
+    {
+       Console.WriteLine("Something happened");
     }
 
     [When(@"I update that widget by adding a unique description")]
@@ -94,10 +101,10 @@ public class WidgetStepDefinitions
         getUpdateWidgetRequest.Filters = new List<Filter>();
         getUpdateWidgetRequest.Filters.Add(new Filter
         {
-            Value = getAllWidgetNamesStringJObject["appliedFilters"][0]["id"].ToString(),
-            Name = getAllWidgetNamesStringJObject["appliedFilters"][0]["name"].ToString()
+            Value = getAllWidgetNamesStringJObject?["appliedFilters"]?[0]?["id"]?.ToString(),
+            Name = getAllWidgetNamesStringJObject?["appliedFilters"]?[0]?["name"]?.ToString()
         });
-        var getUpdateWidgetResponse = await _widgetService.UpdateWidget(_expectedResponseGetWidgetById.Id.ToString(), getUpdateWidgetRequest);
+        var getUpdateWidgetResponse = await _widgetService.UpdateWidget(_expectedResponseGetWidgetById?.Id.ToString(), getUpdateWidgetRequest);
         getUpdateWidgetResponse.Status.Should().Be(200);
         _apiResponse = await getUpdateWidgetResponse.TextAsync();
     }
@@ -121,7 +128,7 @@ public class WidgetStepDefinitions
     public void ThenTheWidgetResponseShouldMatchTheExpectedResultForPUTWidgetById()
     {
         var responseObject = JsonObject.Parse(_apiResponse);
-        var actualResponseMessage = responseObject["message"].ToString();
+        var actualResponseMessage = responseObject?["message"]?.ToString();
         actualResponseMessage.Should().Be(_expectedUpdateMessage);
     }
 }
