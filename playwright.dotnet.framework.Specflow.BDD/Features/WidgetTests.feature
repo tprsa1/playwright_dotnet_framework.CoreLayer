@@ -9,20 +9,23 @@ Rule: All tests should pass
 Scenario Outline: Get widget by ID
     Given I have widget test data for ID <id>
     When I retrieve the widget by ID
+    But I want to know what is the shortest string between <values>
     Then the widget response should match the expected result for GET Widget By Id
 
     Examples:
-    | id  |
-    | 139396  |
-    | 139397  |
-    | 139398  |
-    | 139399  |
-    | 139400  |
+    | id     | values                  |
+    | 139396 | one,three,courts,blorts |
+    | 139397 | b,ab,abc,abcd           |
+    | 139398 | one,three               |
+    | 139399 | which,is,the,shortes    |
+    | 139400 | this,one,is             |
 
 Scenario Outline: Create a widget
     Given I have widget creation test data for widget named <widgetName>
     When I create a new widget
     But something happens
+    | First thing | Second thing | Third Thing |
+    | This happened first | This happened afterwards | This happened last |
     Then the widget response should contain an Id number
 
     Examples:

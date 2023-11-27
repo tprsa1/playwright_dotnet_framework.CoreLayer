@@ -85,16 +85,17 @@ namespace playwright.dotnet.framework.Specflow.BDD.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Get widget by ID")]
-        [NUnit.Framework.TestCaseAttribute("139396", null)]
-        [NUnit.Framework.TestCaseAttribute("139397", null)]
-        [NUnit.Framework.TestCaseAttribute("139398", null)]
-        [NUnit.Framework.TestCaseAttribute("139399", null)]
-        [NUnit.Framework.TestCaseAttribute("139400", null)]
-        public virtual void GetWidgetByID(string id, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("139396", "one,three,courts,blorts", null)]
+        [NUnit.Framework.TestCaseAttribute("139397", "b,ab,abc,abcd", null)]
+        [NUnit.Framework.TestCaseAttribute("139398", "one,three", null)]
+        [NUnit.Framework.TestCaseAttribute("139399", "which,is,the,shortes", null)]
+        [NUnit.Framework.TestCaseAttribute("139400", "this,one,is", null)]
+        public virtual void GetWidgetByID(string id, string values, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("id", id);
+            argumentsOfScenario.Add("values", values);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get widget by ID", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
@@ -126,6 +127,9 @@ this.FeatureBackground();
     testRunner.When("I retrieve the widget by ID", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
+    testRunner.But(string.Format("I want to know what is the shortest string between {0}", values), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+#line hidden
+#line 13
     testRunner.Then("the widget response should match the expected result for GET Widget By Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -145,7 +149,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("widgetName", widgetName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a widget", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 22
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -168,16 +172,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-#line 23
+#line 24
     testRunner.Given(string.Format("I have widget creation test data for widget named {0}", widgetName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 25
     testRunner.When("I create a new widget", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
-    testRunner.But("something happens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
-#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "First thing",
+                            "Second thing",
+                            "Third Thing"});
+                table1.AddRow(new string[] {
+                            "This happened first",
+                            "This happened afterwards",
+                            "This happened last"});
 #line 26
+    testRunner.But("something happens", ((string)(null)), table1, "But ");
+#line hidden
+#line 29
     testRunner.Then("the widget response should contain an Id number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

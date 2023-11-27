@@ -9,7 +9,6 @@ using FluentAssertions;
 using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using System.Text.Json.Nodes;
-using System;
 
 [Binding]
 public class WidgetStepDefinitions
@@ -84,10 +83,34 @@ public class WidgetStepDefinitions
         _apiResponse = await response.TextAsync();
     }
     [When(@"something happens")]
-    public void WhenSomethingHappens()
+    public void WhenSomethingHappens(Table table)
     {
-       Console.WriteLine("Something happened");
+        foreach (var row in table.Rows)
+        {
+            var firstThing = row["First thing"];
+            var secondThing = row["Second thing"];
+            var thirdThing = row["Third Thing"];
+
+            // Example: Print the values
+            Console.WriteLine($"First: {firstThing}, Second: {secondThing}, Third: {thirdThing}");
+        }
     }
+    [When(@"I want to know what is the shortest string between (.*)")]
+    public void WhenIWantToKnowWhatIsTheShortestStringBetween(List<string> strings)
+    {
+        var shortestString = strings.OrderBy(s => s.Length).FirstOrDefault();
+        Console.WriteLine($"The shortest string is: {shortestString}");
+    }
+
+
+    [StepArgumentTransformation]
+    public List<string> TransformToListOfString(string commaSeparatedList)
+    {
+        return commaSeparatedList.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                                 .Select(s => s.Trim())
+                                 .ToList();
+    }
+
 
     [When(@"I update that widget by adding a unique description")]
     public async Task WhenIUpdateThatWidgetByAddingAUniqueDescription()
