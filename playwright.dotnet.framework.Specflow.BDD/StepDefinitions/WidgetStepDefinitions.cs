@@ -1,5 +1,4 @@
-﻿using Microsoft.Playwright;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using playwright.dotnet.framework.BusinessLayer.APIServiceObject;
 using playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels;
