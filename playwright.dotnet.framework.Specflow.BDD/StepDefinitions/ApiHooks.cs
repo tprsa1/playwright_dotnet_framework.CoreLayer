@@ -1,12 +1,12 @@
 ﻿using BoDi;
-using Microsoft.Playwright;
+using playwright.dotnet.framework.CoreLayer.APIUtils;
 using TechTalk.SpecFlow;
 
 [Binding]
 public class ApiHooks
 {
     private readonly IObjectContainer _container;
-    private IAPIRequestContext? _requestContext;
+    private IHttpService? _requestContext;
 
     public ApiHooks(IObjectContainer container)
     {
@@ -14,21 +14,15 @@ public class ApiHooks
     }
 
     [BeforeScenario]
-    public async Task BeforeScenarioAsync()
+    public void BeforeScenarioAsync()
     {
-        var playwright = await Playwright.CreateAsync();
-        _requestContext = await playwright.APIRequest.NewContextAsync();
-
-        // Register the IAPIRequestContext instance in the container for dependency injection
-        _container.RegisterInstanceAs<IAPIRequestContext>(_requestContext);
+        _requestContext = new PlaywrightHttpWrapper();
+        _container.RegisterInstanceAs<IHttpService>(_requestContext);
     }
 
     [AfterScenario]
-    public async Task AfterScenarioAsync()
+    public void AfterScenarioAsync()
     {
-        if (_requestContext != null)
-        {
-            await _requestContext.DisposeAsync();
-        }
+        Console.WriteLine("After Scenario");
     }
 }

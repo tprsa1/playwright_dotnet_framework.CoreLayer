@@ -9,6 +9,7 @@ using FluentAssertions;
 using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.UpdateWidgetModels;
 using System.Text.Json.Nodes;
+using playwright.dotnet.framework.CoreLayer.APIUtils;
 
 [Binding]
 public class WidgetStepDefinitions
@@ -19,9 +20,9 @@ public class WidgetStepDefinitions
     private string? _apiResponse;
     private string? _expectedUpdateMessage;
 
-    public WidgetStepDefinitions(IAPIRequestContext requestContext)
+    public WidgetStepDefinitions(IHttpService service)
     {
-        _widgetService = new WidgetsServiceObject(requestContext);
+        _widgetService = new WidgetsServiceObject(service);
     }
 
     [Given(@"I print ""([^""]*)"" before test execution")]
@@ -72,15 +73,15 @@ public class WidgetStepDefinitions
     public async Task WhenIRetrieveTheWidgetById()
     {
         var response = await _widgetService.GetWidgetById(_expectedResponseGetWidgetById?.Id.ToString());
-        response.Status.Should().Be(200);
-        _apiResponse = await response.TextAsync();
+        response.StatusCode.Should().Be(200);
+        _apiResponse = response.Content;
     }
     [When(@"I create a new widget")]
     public async Task WhenICreateANewWidget()
     {
         var response = await _widgetService.CreateWidget(_createWidgetRequestBody);
-        response.Status.Should().Be(201);
-        _apiResponse = await response.TextAsync();
+        response.StatusCode.Should().Be(201);
+        _apiResponse = response.Content;
     }
     [When(@"something happens")]
     public void WhenSomethingHappens(Table table)
@@ -128,8 +129,8 @@ public class WidgetStepDefinitions
             Name = getAllWidgetNamesStringJObject?["appliedFilters"]?[0]?["name"]?.ToString()
         });
         var getUpdateWidgetResponse = await _widgetService.UpdateWidget(_expectedResponseGetWidgetById?.Id.ToString(), getUpdateWidgetRequest);
-        getUpdateWidgetResponse.Status.Should().Be(200);
-        _apiResponse = await getUpdateWidgetResponse.TextAsync();
+        getUpdateWidgetResponse.StatusCode.Should().Be(200);
+        _apiResponse = getUpdateWidgetResponse.Content;
     }
 
 

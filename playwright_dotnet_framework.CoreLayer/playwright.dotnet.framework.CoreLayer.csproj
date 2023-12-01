@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="APIUtils\" />
     <Folder Include="Logger\" />
     <Folder Include="Reporter\" />
     <Folder Include="WebUtils\" />
