@@ -10,7 +10,7 @@ using playwright.dotnet.framework.BusinessLayer.Models.CreateWidgetModels;
 using playwright.dotnet.framework.BusinessLayer.Models.GetWidgetByIdModels;
 using playwright.dotnet.framework.CoreLayer.APIUtils;
 
-namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
+namespace playwright.dotnet.framework.TestRunner.NUnit.TestRunner.APITests
 {
     [Parallelizable(ParallelScope.Children)]
     public class WidgetTests
@@ -63,7 +63,7 @@ namespace playwright.dotnet.framework.CoreLayer.TestRunner.TestRunner
             });
             var getUpdateWidgetResponse = await widgetService.UpdateWidget(num.ToString(), getUpdateWidgetRequest);
             getUpdateWidgetResponse.StatusCode.Should().Be(200);
-            var ResponseObject = JsonObject.Parse(getUpdateWidgetResponse.Content);
+            var ResponseObject = JsonNode.Parse(getUpdateWidgetResponse.Content);
             var expectedResponseMessage = testObject["message"].ToString();
             var actualResponseMessage = ResponseObject["message"].ToString();
             actualResponseMessage.Should().Be(expectedResponseMessage);

@@ -9,7 +9,7 @@ namespace playwright.dotnet.framework.CoreLayer.CommonUtils
 
         public static JArray GetTestData(string methodNameSource)
         {
-            string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), $"TestData/{methodNameSource}.json"); ;
+            string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), $"TestData/{methodNameSource}.json");
                 string jsonText = File.ReadAllText(jsonFilePath);
                 JArray jsonArray = JArray.Parse(jsonText);
                 return jsonArray;
