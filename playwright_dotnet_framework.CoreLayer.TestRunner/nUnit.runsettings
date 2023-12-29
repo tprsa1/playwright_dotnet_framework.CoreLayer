@@ -1,0 +1,10 @@
+﻿<RunSettings>
+  <!-- Configurations for NUnit adapter -->
+  <NUnit>
+    <!-- Number of threads to use for running tests -->
+    <NumberOfTestWorkers>2</NumberOfTestWorkers>
+    
+    <!-- Disable parallelization: true or false -->
+    <DisableParallelization>false</DisableParallelization>
+  </NUnit>
+</RunSettings>

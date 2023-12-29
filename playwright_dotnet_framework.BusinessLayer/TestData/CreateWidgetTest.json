@@ -1,0 +1,167 @@
+﻿[
+  {
+    "widgetType": "statisticTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
+      }
+    },
+    "filters": [
+      {
+        "value": "139395",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "TEST WIDGET ONE",
+    "description": "",
+    "filterIds": [
+      "139395"
+    ]
+  },
+  {
+    "widgetType": "statisticTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
+      }
+    },
+    "filters": [
+      {
+        "value": "139395",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "TEST WIDGET TWO",
+    "description": "",
+    "filterIds": [
+      "139395"
+    ]
+  },
+  {
+    "widgetType": "statisticTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
+      }
+    },
+    "filters": [
+      {
+        "value": "139395",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "TEST WIDGET THREE",
+    "description": "",
+    "filterIds": [
+      "139395"
+    ]
+  },
+  {
+    "widgetType": "statisticTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
+      }
+    },
+    "filters": [
+      {
+        "value": "139395",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "TEST WIDGET FOUR",
+    "description": "",
+    "filterIds": [
+      "139395"
+    ]
+  },
+  {
+    "widgetType": "statisticTrend",
+    "contentParameters": {
+      "contentFields": [
+        "statistics$executions$total",
+        "statistics$executions$passed",
+        "statistics$executions$failed",
+        "statistics$executions$skipped",
+        "statistics$defects$product_bug$pb001",
+        "statistics$defects$automation_bug$ab001",
+        "statistics$defects$system_issue$si001",
+        "statistics$defects$no_defect$nd001",
+        "statistics$defects$to_investigate$ti001"
+      ],
+      "itemsCount": "50",
+      "widgetOptions": {
+        "zoom": false,
+        "timeline": "launch",
+        "viewMode": "area-spline"
+      }
+    },
+    "filters": [
+      {
+        "value": "139395",
+        "name": "DEMO_FILTER"
+      }
+    ],
+    "name": "TEST WIDGET FIVE",
+    "description": "",
+    "filterIds": [
+      "139395"
+    ]
+  }
+]
