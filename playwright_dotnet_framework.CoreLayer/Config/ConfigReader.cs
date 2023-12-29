@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-
+//config reader
 namespace playwright.dotnet.framework.CoreLayer.Config
 {
     public static class ConfigReader
